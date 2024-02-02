@@ -9,28 +9,28 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText NOTA1;
+    private EditText Lado;
     private TextView Resultado;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        NOTA1=findViewById(R.id.nota1);
+        Lado=findViewById(R.id.lado);
         Resultado=findViewById(R.id.resultado);
 
-        Button calcularL =findViewById(R.id.button);
+        Button calcularL =findViewById(R.id.boton);
         calcularL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calcularLado();}
+                calcularLado();
+            }
         });
     }
+
     private void calcularLado(){
-        float lado = Float.parseFloat(NOTA1.getText().toString());
+        float lado = Float.parseFloat(Lado.getText().toString());
 
         float area= lado*lado;
 
         Resultado.setText(String.valueOf(area) + "cm^2");
-}
-    }
+}}
